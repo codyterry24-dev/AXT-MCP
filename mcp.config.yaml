@@ -1,0 +1,49 @@
+# MCP Configuration for AXT
+# Service and Model Registry Configuration
+
+registry:
+  name: "AXT-MCP"
+  version: "1.0.0"
+  description: "Model Context Protocol service registry for AXT"
+
+server:
+  host: "localhost"
+  port: 3000
+  environment: "development"
+
+services:
+  # Example service configuration
+  # - name: "example-service"
+  #   type: "connector"
+  #   enabled: true
+  #   config:
+  #     endpoint: "https://api.example.com"
+  #     timeout: 30000
+
+models:
+  # Model registry configuration
+  # - name: "example-model"
+  #   provider: "openai"
+  #   version: "1.0"
+  #   config:
+  #     api_key: "${EXAMPLE_API_KEY}"
+
+connectors:
+  # Connector configurations will be loaded from /src/connectors/
+  autoload: true
+  path: "./src/connectors"
+
+logging:
+  level: "info"
+  format: "json"
+  output: "stdout"
+
+security:
+  # Security settings
+  enable_cors: true
+  allowed_origins:
+    - "http://localhost:3000"
+  rate_limiting:
+    enabled: true
+    max_requests: 100
+    window_ms: 900000
