@@ -1,0 +1,31 @@
+{
+  "name": "axt-mcp",
+  "version": "1.0.0",
+  "description": "MCP service registry and connector framework for AXT",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "service-registry",
+    "connector",
+    "axt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "eslint": "^8.50.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
